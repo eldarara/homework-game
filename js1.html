@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5d9112d2e7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    body {
+        background-color: #00008b;
+        height: 100vh;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .field {
+        background-color: #C2F5FF;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+    }
+</style>
+
+<body>
+
+    <form class="form" action="#">
+        <div class="field">
+            <h1>Выберите сложность</h1>
+
+            <div class="buttons">
+                <div>
+                    <input type="button" value="1" class="complexity_button">
+                </div>
+
+                <div>
+                    <input type="button" value="2" class="complexity_button">
+                </div>
+
+                <div>
+                    <input type="button" value="3" class="complexity_button">
+                </div>
+            </div>
+
+
+
+            <div>
+                <button class="button" type="submit">Отправить</button>
+            </div>
+        </div>
+
+
+    </form>
+    <script>
+        buttons = document.querySelectorAll('input')
+        buttons.forEach(btn => {
+            addEventListener('click', f)
+        })
+        function f(e) {
+            window.selectHard = e.target.value;
+            console.log(selectHard)
+        }
+    </script>
+</body>
+
+</html>
