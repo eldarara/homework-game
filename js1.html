@@ -58,7 +58,7 @@
 
 
             <div>
-                <button class="button" type="submit">Отправить</button>
+                <button class="submitButton" type="button">Отправить</button>
             </div>
         </div>
 
@@ -70,9 +70,22 @@
             addEventListener('click', f)
         })
         function f(e) {
-            window.application.selectHard = e.target.value;
+            window.selectHard = e.target.value;
             console.log(selectHard)
         }
+
+        const submitButton = document.querySelector('.submitButton')
+        const form = document.querySelector('form')
+        submitButton.addEventListener('click', () => {
+
+            if (selectHard != '') {
+                document.querySelector('body').innerHTML = '';
+            }
+
+
+        });
+
+
     </script>
 </body>
 
